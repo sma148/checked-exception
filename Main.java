@@ -9,14 +9,19 @@ class Main {
   public static void main(String[] args) {
     try{
     FileReader fileReader = new FileReader("to_be_read.txt");
-    } catch(FileNotFoundException e){
-      System.out.println("File Not Found, Exception catched!");
-    }
+     
     BufferedReader bufferedReader = new BufferedReader(fileReader);
 		String line;
 			while ((line = bufferedReader.readLine()) != null) {
 				System.out.println(line);
 			}
-			fileReader.close();
+        fileReader.close();
+    }
+      catch(IOException e1){
+      System.out.println("Exception catched!");
+    
+      } 
   }
-}
+			
+      
+  }
